@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app'){{--home hereda de un archivo  llamada app--}}
 
 @section('content')
 <div class="container">
@@ -29,7 +29,7 @@
                                 <td>
                                     {{ $item->name }}
                                 </td>                    
-                                <td width="20px">
+                                <td width="20px"><!--Uso exclusivo de formulario para la operacion elimniar, se uso form aplicando laravlecollective-->
                                     {!! Form::open(['route' => ['destroyProduct', $item->id], 
                                     'method' => 'DELETE']) !!}
                                     <a href="#" class="btn-delete" title="Eliminar">
@@ -41,7 +41,7 @@
                             @endforeach
                         </tbody>
                     </table>
-                    {!! $products->render() !!}
+                    {!! $products->render() !!}<!--paginacion-->
                 </div>
             </div>
         </div>

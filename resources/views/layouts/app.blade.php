@@ -83,6 +83,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/script.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>{{--el yiel para el script de alertas ubicada en  dir public--}}
 </body>
 </html>
