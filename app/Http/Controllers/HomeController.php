@@ -27,6 +27,12 @@ class HomeController extends Controller
         return view('home', compact('products'));
     }
     
+    public function index2()
+    {
+        $listas_reproduccion = \App\Listas_reproduccion::paginate();
+        return view('home2', compact('listas_reproduccion'));
+    }
+
     public function destroyProduct(Request $request, $id)
     {
         if($request->ajax()){            
