@@ -84,8 +84,8 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>{{--el yiel para el script de alertas ubicada en  dir public--}}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
-    </script>
-    <script type="text/javascript" src="js/index.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>-->
+    <script src="{{ asset('js/index-ajax.js')}}"></script>
 </body>
 </html>

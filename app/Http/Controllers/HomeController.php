@@ -29,8 +29,18 @@ class HomeController extends Controller
     
     public function index2()
     {
+        /*$listas_reproduccion = \App\Listas_reproduccion::pluck("nombre");
+        return view('home2')->with('listas_reproduccion', $listas_reproduccion);*/
         $listas_reproduccion = \App\Listas_reproduccion::paginate();
         return view('home2', compact('listas_reproduccion'));
+    }
+
+    public function getVideos(Request $request, $id)
+    {
+        if($request->ajax()){            
+            $videos = \App\Video::videos($id);
+            return response()->json($videos);   
+        }
     }
 
     public function destroyProduct(Request $request, $id)

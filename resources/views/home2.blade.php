@@ -8,7 +8,8 @@
     <div class="row">
     <div class="col-md-4">
         <p>Lista de reproducción
-        {{-- Form::select('lista_reproduccion', $listas_reproduccion) --}}
+        
+        {{--{!! Form::select('lista_reproduccion', $listas_reproduccion) !!}--}}
         <select id="lista_reproduccion" name="lista_reproduccion" class="form-control">
             @foreach($listas_reproduccion as $item)
                 <option>{{ $item->nombre }}</option>
@@ -18,7 +19,8 @@
     </div>
     <div class="col-md-4">
         <p>Vídeos
-        <select id="videos" name="video" class="form-control">
+        <select id="video" name="video" class="form-control">
+            <option value=""></option>
         </select>
         </p>
     </div>
@@ -29,6 +31,7 @@
 </div>
 <br>
 <br>
+
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
@@ -75,4 +78,5 @@
         </div>
     </div>
 </div>
+
 @endsection

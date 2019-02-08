@@ -18,4 +18,5 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index2');
+Route::get('/videos/{id}', 'HomeController@getVideos');
 Route::DELETE('/eliminar-producto/{id}', 'HomeController@destroyProduct')->name('destroyProduct');
